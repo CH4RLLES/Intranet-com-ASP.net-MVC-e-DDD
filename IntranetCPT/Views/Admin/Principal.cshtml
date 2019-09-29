@@ -1,0 +1,196 @@
+﻿
+@{
+    ViewData["Title"] = "Principal";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8">
+            <!-- ***** Fim Gerenciamneto *****
+            <div class="row">
+                <section class="uza-services-area section-padding-80-0" id="servicos">
+                    <div class="container col-sm-12">
+
+                        <div class="row">
+
+                            <div class="col-8 col-lg-3">
+
+                                <div class="single-service-area mb-80">
+
+                                    <div class="service-icon">
+                                        <i class='far fa-comments'></i>
+                                    </div>
+                                    <a href="#"><span class="label btn btn3">Gerenciar Conteúdo</span></a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-3">
+                                <div class="single-service-area mb-80">
+                                    <div class="service-icon">
+                                        <i class='far fa-file-video'></i>
+                                    </div>
+                                    <a href="#"><span class="label label-primary">Gerenciar CPT Responde</span></a>
+
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-3">
+                                <div class="single-service-area mb-80">
+                                    <div class="service-icon">
+                                        <i class='fas fa-archive'></i>
+                                    </div>
+                                    <a href="#"><span class="label label-primary">Gerenciar Manuais</span></a>
+
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-3">
+                                <div class="single-service-area mb-80">
+                                    <div class="service-icon">
+                                        <i class='fas fa-phone-square'></i>
+                                    </div>
+                                    <a href="#"><span class="label btn uza-btn ">Gerenciar Conteúdo</span></a>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+            </div>-->
+            <div class="row">
+                <section class="uza-blog-area">
+                    <!-- Background Curve -->
+                    <div class="blog-bg-curve">
+                        <img src="~/img/core-img/curve-1.png" alt="">
+                    </div>
+                    <div class="container col-sm-12">
+                        <h1>Avisos</h1>
+                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#myCarousel" data-slide-to="1"></li>
+                            </ol>
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <img src="https://placehold.it/800x400?text=IMAGE" alt="Image">
+                                    <div class="carousel-caption">
+                                        <h3>Aviso 1</h3>
+                                        <p>Lorem ipsum...</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="https://placehold.it/800x400?text=IMAGE" alt="Image">
+                                    <div class="carousel-caption">
+                                        <h3>Aviso 2</h3>
+                                        <p>Lorem ipsum...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                <span class="sr-only">Anterior</span>
+                            </a>
+                            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                <span class="sr-only">Proxímo</span>
+                            </a>
+                        </div><br />
+                        <div class="get-a-quote ml-4 mr-3">
+                            <button type="button" class="btn uza-btn" data-toggle="modal" data-target="#exampleModal" data-whatever="mdo">Mais Avisos</button>
+                        </div>
+                    </div>
+                </section>
+                <br /><br /><br />
+                <section class="uza-blog-area">
+                    <div class="blog-bg-curve">
+                        <img src="~/img/core-img/curve-1.png" alt="">
+                    </div>
+                    <div class="container col-sm-12">
+                        <h1>Notícias</h1>
+                        <div id="myCarousel2" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
+                                <li data-target="#myCarousel2" data-slide-to="1"></li>
+                            </ol>
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <img src="https://placehold.it/800x400?text=IMAGE" alt="Image">
+                                    <div class="carousel-caption">
+                                        <h3>Notícia 1</h3>
+                                        <p>Lorem ipsum...</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="https://placehold.it/800x400?text=IMAGE" alt="Image">
+                                    <div class="carousel-caption">
+                                        <h3>Notícia 2</h3>
+                                        <p>Lorem ipsum...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="left carousel-control" href="#myCarousel2" role="button" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                <span class="sr-only">Anterior</span>
+                            </a>
+                            <a class="right carousel-control" href="#myCarousel2" role="button" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                <span class="sr-only">Proxímo</span>
+                            </a>
+                        </div>
+                        <br />
+                        <div class="get-a-quote ml-4 mr-3">
+                            <button type="button" class="btn uza-btn" data-toggle="modal" data-target="#exampleModal" data-whatever="mdo">Mais Notícias</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="single-blog-post bg-img mb-80" style="background-image: url(./img/bg-img/serget.png);">
+                <!-- Post Content -->
+                <div class="post-content">
+                    <p class="post-title">Aniversariantes do Mês</p><br />
+                    <p><strong>Leonardo Duarte</strong> (TI) -02/09 </p>
+                    <p><strong>Ariany Ferreira</strong> (Atendimento e Protocolo)- 06/09 </p>
+                    <p><strong>Aryela Rodrigues</strong> (Apoio à Jari)- 08/09 </p>
+                    <a href="http://www.serget.com.br/" target="_blank" class="read-more-btn">Mostrar Todos do Mês <i class="arrow_carrot-2right"></i></a>
+                </div>
+            </div>
+            <div class="single-blog-post bg-img mb-80" style="background-image: url(./img/bg-img/serget.png);">
+                <div class="post-content">
+                    <a href="#" class="post-title"><h3> Ouvidoria <i class='fas fa-bullhorn'></i></h3> </a>
+                </div>
+            </div>
+            <div class="single-blog-post bg-img mb-80" style="background-image: url(./img/bg-img/serget.png);">
+                <div class="post-content">
+                    <p class="post-title">CPT Responde</p><br />
+                    <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Posso mudar o computador de local?</button><br />
+                    <div id="demo" class="collapse">
+                        Não. É necessário consultar a equipe de TI antes de realizar qualquer tipo de alteração nos equipamentos do CPT. Isso porque a equipe precisa apresentar, mensalmente,
+                        um relatório gerencial com todas as informações pertinentes ao contrato, principalmente sobre a disponibilização dos computadores para cada colaborador.
+                    </div><br />
+                    <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo2">Posso consultar meu contracheque online?</button><br />
+                    <div id="demo2" class="collapse">
+                        Sim. O demonstrativo de pagamento está disponível no sistema de ponto do CPT, no mesmo espaço em que você realiza o login para registrar as entradas e saídas do trabalho.
+                    </div><br />
+                    <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo3">O que faz o Núcleo de Cobrança?</button>
+                    <div id="demo3" class="collapse">
+                        O Núcleo de Cobrança e Recuperação de Crédito atua dando suporte administrativo à Procuradoria Federal Especializada (PFE) do DNIT, com análise e cadastramento dos processos
+                        administrativos de autos de infrações de trânsito que serão inscritos em dívida ativa pela Equipe Nacional de Cobrança (Enac).
+                    </div>
+                </div>
+            </div>
+            <div class="single-blog-post bg-img mb-80" style="background-image: url(./img/bg-img/serget.png);">
+                <div class="post-content">
+                    <p class="post-title">Links Úteis</p>
+                    <a href="#"><span class="label label-primary">SIOR</span></a>
+                    <a href="#"><span class="label label-primary">DNIT</span></a>
+                    <a href="#"><span class="label label-primary">SERGET</span></a>
+                    <a href="#"><span class="label label-primary">DCT Tecnologia</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+</div>
+
+

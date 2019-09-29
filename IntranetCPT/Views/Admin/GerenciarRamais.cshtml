@@ -1,0 +1,75 @@
+﻿@model IntranetCPT.Models.Filtros.FiltroRamais
+
+@{
+    ViewData["Title"] = "GerenciarRamais";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="section-heading text-center">
+                <h2>Gerenciar Ramais</h2>
+                <p>Consórcio Processamento & Tecnologia</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="col-12 col-lg-4">
+        <form asp-controller="Admin" asp-action="CadRamais">
+            @if (TempData["Messagem"] != null)
+            {
+                <p class="alert alert-info">@TempData["Messagem"]</p>
+            }
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Setor" class="col-form-label">Setor:</label>
+                <input asp-for="Setor" class="form-control" />
+                <span asp-validation-for="Setor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Telefone" class="col-form-label">Telefone:</label>
+                <input asp-for="Telefone" class="form-control" id="telefone" />
+                <span asp-validation-for="Telefone" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="Id" />
+
+            <input type="submit" value="Cadastrar" class="btn btn-primary" />
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Canselar</button>
+
+        </form>
+    </div>
+    <div class="col-12 col-lg-8">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">
+                        @Html.DisplayNameFor(model => model.RamaisLista.FirstOrDefault().Setor)
+                    </th>
+                    <th scope="col">
+                        @Html.DisplayNameFor(model => model.RamaisLista.FirstOrDefault().Telefone)
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.RamaisLista)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Setor)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Telefone)
+                        </td>
+                        <td>
+                            <a asp-controller="Admin" asp-action="BuscarCadRamais" asp-route-id="@item.Id"><i class="fa fa-pencil-square-o"></i></a>
+                        </td>
+                        <td><a href=""><i class="fa fa-close"></i></a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

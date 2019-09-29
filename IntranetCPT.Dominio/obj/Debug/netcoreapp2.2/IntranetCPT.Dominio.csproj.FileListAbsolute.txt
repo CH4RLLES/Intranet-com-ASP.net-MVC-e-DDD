@@ -1,0 +1,9 @@
+C:\Users\charles.sousa\source\repos\IntranetCPT\IntranetCPT.Dominio\bin\Debug\netcoreapp2.2\IntranetCPT.Dominio.deps.json
+C:\Users\charles.sousa\source\repos\IntranetCPT\IntranetCPT.Dominio\bin\Debug\netcoreapp2.2\IntranetCPT.Dominio.dll
+C:\Users\charles.sousa\source\repos\IntranetCPT\IntranetCPT.Dominio\bin\Debug\netcoreapp2.2\IntranetCPT.Dominio.pdb
+C:\Users\charles.sousa\source\repos\IntranetCPT\IntranetCPT.Dominio\obj\Debug\netcoreapp2.2\IntranetCPT.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\charles.sousa\source\repos\IntranetCPT\IntranetCPT.Dominio\obj\Debug\netcoreapp2.2\IntranetCPT.Dominio.AssemblyInfoInputs.cache
+C:\Users\charles.sousa\source\repos\IntranetCPT\IntranetCPT.Dominio\obj\Debug\netcoreapp2.2\IntranetCPT.Dominio.AssemblyInfo.cs
+C:\Users\charles.sousa\source\repos\IntranetCPT\IntranetCPT.Dominio\obj\Debug\netcoreapp2.2\IntranetCPT.Dominio.dll
+C:\Users\charles.sousa\source\repos\IntranetCPT\IntranetCPT.Dominio\obj\Debug\netcoreapp2.2\IntranetCPT.Dominio.pdb
+C:\Users\charles.sousa\source\repos\IntranetCPT\IntranetCPT.Dominio\obj\Debug\netcoreapp2.2\IntranetCPT.Dominio.csprojAssemblyReference.cache

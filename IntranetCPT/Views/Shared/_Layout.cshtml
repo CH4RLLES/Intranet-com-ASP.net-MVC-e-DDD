@@ -1,0 +1,224 @@
+﻿@model IntranetCPT.Models.LoginDTO
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="uza - Model Agency HTML5 Template">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Title -->
+    <title>@ViewData["Title"] - Consórcio CPT</title>
+    <!-- Favicon -->
+    <link rel="icon" href="./img/core-img/favicon.ico">
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="~/style.css">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="wrapper">
+            <div class="cssload-loader"></div>
+        </div>
+    </div>
+    <!-- ***** Modal LOGIN ***** -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Formulário de Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form asp-controller="Login" asp-action="Login">
+                        <div class="form-group">
+                            <label asp-for="Cpf" class="col-form-label">CPF:</label>
+                            <input asp-for="Cpf" class="form-control" id="recipient-name" required oninvalid="this.setCustomValidity('CPF é obrigatório')" oninput="this.setCustomValidity('')" />
+                            <span asp-validation-for="Cpf" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Senha" class="col-form-label">SENHA:</label>
+                            <input asp-for="Senha" class="form-control" id="recipient-name" required oninvalid="this.setCustomValidity('Senha é obrigatório')" oninput="this.setCustomValidity('')" />
+                            <span asp-validation-for="Senha" class="text-danger"></span>
+                            <a href="http://ponto.consorciocpt.com.br/Default.aspx" class="btn btn-link">Esqueceu sua senha?</a>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="submit" value="Entrar" class="btn btn-primary" />
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** FINAL Modal LOGIN ***** -->
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area">
+        <!-- Main Header Start -->
+        <div class="main-header-area">
+            <div class="classy-nav-container breakpoint-off">
+                <!-- Classy Menu -->
+                <nav class="classy-navbar justify-content-between" id="uzaNav">
+                    <!-- Logo -->
+                    <a class="nav-brand" href="#inicio"><img src="~/img/bg-img/logo_quadrado.png" alt="" width="45"> CPT</a>
+                    <!-- Navbar Toggler -->
+                    <div class="classy-navbar-toggler">
+                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+                    </div>
+                    <!-- Menu -->
+                    <div class="classy-menu">
+                        <!-- Menu Close Button -->
+                        <div class="classycloseIcon">
+                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                        </div>
+                        <!-- Nav Start -->
+                        <div class="classynav">
+                            <ul id="nav">
+                                <li class="current-item"><a href="#inicio">Início</a></li>
+                                <li><a href="#sobre">Sobre Nós</a></li>
+                                <li><a href="#empresas">Nossas Empresas</a></li>
+                                <li><a href="#diretrizes">Diretrizes Estratégicas</a></li>
+                                <li><a href="#servicos">Serviços Prestados</a></li>
+                                <li><a href="#contato">Contatos</a></li>
+                            </ul>
+                            <!-- Get A Quote-->
+                            <div class="get-a-quote ml-4 mr-3">
+                                <button type="button" class="btn uza-btn" data-toggle="modal" data-target="#exampleModal" data-whatever="mdo">Login</button>
+                            </div>
+                        </div>
+                        <!-- Nav End -->
+                    </div>
+                </nav>
+            </div>
+        </div>
+        @if (TempData["LoginUsuarioFalhou"] != null)
+        {
+        <div class="alert alert-danger">
+            @TempData["LoginUsuarioFalhou"]
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        }
+    </header>
+    <!-- ***** Header Area End ***** -->
+    <div>
+        <partial name="_CookieConsentPartial" />
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <!-- ***** Footer Area Start ***** -->
+    <footer class="footer-area section-padding-80-0" id="contato">
+        <div class="container">
+            <!-- ***** Breadcrumb Area Start ***** -->
+            <div class="breadcrumb-area">
+                <div class="container h-100">
+                    <div class="row h-100 align-items-end">
+                        <div class="col-12">
+                            <div class="breadcumb--con">
+                                <h2 class="title">Contato</h2>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Background Curve -->
+                <div class="breadcrumb-bg-curve">
+                    <img src="./img/core-img/curve-5.png" alt="">
+                </div>
+            </div>
+            <!-- ***** Breadcrumb Area End ***** -->
+            <div class="row justify-content-between">
+                <!-- Contact Form -->
+                <div class="col-12 col-lg-12">
+                    <div class="uza-contact-form mb-80">
+                        <div class="contact-heading mb-50">
+                            <h4>Obrigado pelo seu interesse. <br>Preencha o formulário abaixo para conhecer mais a empresa.</h4>
+                        </div>
+                        <form action="#" method="post">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control mb-30" name="full-name" placeholder="Nome">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control mb-30" name="email" placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control mb-30" name="full-name" placeholder="Telefone">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control mb-30" name="email" placeholder="Organização">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <textarea class="form-control mb-30" name="message" rows="8" cols="80" placeholder="Menssagem"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn uza-btn btn-3 mt-15">Enviar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Single Contact Card
+    <div class="col-12 col-lg-3">
+        <div class="contact-sidebar-area mb-80">
+            <div class="single-contact-card mb-50">
+                <h4>Brasília - DF</h4>
+                <h3>(61) 3315-8237</h3>
+                <h6>
+                    Endereço Filial - Complexo The Union - SMAS Trecho 3  <br>
+                    Bloco A - Sala 209 - Setor Complementar - <br>
+                    Brasília - DF -70610-635
+                </h6>
+            </div>
+            <div class="single-contact-card mb-50">
+                <h4>São Paulo - SP</h4>
+                <h3>(11) 3389-2727</h3>
+                <h6>Endereço Matriz - Rua: Dom Luis Felipe de Orleans, 426</h6>
+            </div>
+        </div>
+    </div>-->
+            </div>
+            <div class="row" style="margin-bottom: 30px;">
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                &copy;
+                <script>document.write(new Date().getFullYear());</script> Consorcio CPT</a>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </div>
+        </div>
+    </footer>
+    <!-- ***** Footer Area End ***** -->
+    <!-- ******* All JS Files ******* -->
+    <!-- jQuery js -->
+    <script src="~/js/jquery.min.js"></script>
+    <!-- Popper js -->
+    <script src="~/js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="~/js/bootstrap.min.js"></script>
+    <!-- All js -->
+    <script src="~/js/uza.bundle.js"></script>
+    <!-- Active js -->
+    <script src="~/js/default-assets/active.js"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,14 @@
+C:\Users\charles.sousa\source\repos\IntranetCPT\IntranetCPT.Servicos\bin\Debug\netcoreapp2.2\IntranetCPT.Servicos.deps.json
+C:\Users\charles.sousa\source\repos\IntranetCPT\IntranetCPT.Servicos\bin\Debug\netcoreapp2.2\IntranetCPT.Servicos.dll
+C:\Users\charles.sousa\source\repos\IntranetCPT\IntranetCPT.Servicos\bin\Debug\netcoreapp2.2\IntranetCPT.Dominio.dll
+C:\Users\charles.sousa\source\repos\IntranetCPT\IntranetCPT.Servicos\bin\Debug\netcoreapp2.2\IntranetCPT.Infra.Dados.dll
+C:\Users\charles.sousa\source\repos\IntranetCPT\IntranetCPT.Servicos\bin\Debug\netcoreapp2.2\IntranetCPT.Infra.Dados.pdb
+C:\Users\charles.sousa\source\repos\IntranetCPT\IntranetCPT.Servicos\bin\Debug\netcoreapp2.2\IntranetCPT.Dominio.pdb
+C:\Users\charles.sousa\source\repos\IntranetCPT\IntranetCPT.Servicos\obj\Debug\netcoreapp2.2\IntranetCPT.Servicos.csprojAssemblyReference.cache
+C:\Users\charles.sousa\source\repos\IntranetCPT\IntranetCPT.Servicos\obj\Debug\netcoreapp2.2\IntranetCPT.Servicos.csproj.CoreCompileInputs.cache
+C:\Users\charles.sousa\source\repos\IntranetCPT\IntranetCPT.Servicos\obj\Debug\netcoreapp2.2\IntranetCPT.Servicos.AssemblyInfoInputs.cache
+C:\Users\charles.sousa\source\repos\IntranetCPT\IntranetCPT.Servicos\obj\Debug\netcoreapp2.2\IntranetCPT.Servicos.AssemblyInfo.cs
+C:\Users\charles.sousa\source\repos\IntranetCPT\IntranetCPT.Servicos\obj\Debug\netcoreapp2.2\IntranetCPT.Servicos.csproj.CopyComplete
+C:\Users\charles.sousa\source\repos\IntranetCPT\IntranetCPT.Servicos\bin\Debug\netcoreapp2.2\IntranetCPT.Servicos.pdb
+C:\Users\charles.sousa\source\repos\IntranetCPT\IntranetCPT.Servicos\obj\Debug\netcoreapp2.2\IntranetCPT.Servicos.dll
+C:\Users\charles.sousa\source\repos\IntranetCPT\IntranetCPT.Servicos\obj\Debug\netcoreapp2.2\IntranetCPT.Servicos.pdb

@@ -1,0 +1,182 @@
+﻿
+@{
+    ViewData["Title"] = "GerenciarConteudo";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<script src="~/js/Admin/GerenciarConteudo.js"></script>
+<script src="~/js/Admin/LerGerenciarConteudo.js"></script>
+<!-- ***** Modal Adicionar ***** -->
+<div class="modal fade bd-example-modal-lg" id="adicionar" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="adicionar">Adicionar Conteúdo</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Título:</label>
+                        <input type="text" class="form-control" id="nome">
+                    </div>
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Introdução:</label>
+                        <input type="text" class="form-control" id="nome">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="col-form-label">Conteúdo:</label>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-12 nopadding">
+                                            <textarea id="txtEditor"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Salvar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Canselar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ***** FINAL Modal Adicionar ***** -->
+<!-- ***** Modal Alterar ***** -->
+<div class="modal fade bd-example-modal-lg" id="editar" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="editar">Alterar Conteúdo</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Título:</label>
+                        <input type="text" class="form-control" id="nome">
+                    </div>
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Introdução:</label>
+                        <input type="text" class="form-control" id="nome">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="col-form-label">Conteúdo:</label>
+                        <div class="container-fluid">
+                            <div class="row">
+
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-12 nopadding">
+                                            <textarea id="txtEditor2"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Salvar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Canselar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ***** FINAL Modal Alterar ***** -->
+<!-- ***** Modal Excluir ***** -->
+<div class="modal fade" id="excluir" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="excluir">Excluir Conteúdo</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Tem certeza que deseja excluir?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Excluir</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Canselar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ***** FINAL Modal Excluir ***** -->
+<div class="breadcrumb-area">
+    <div class="container h-100">
+        <div class="row h-100 align-items-end">
+            <div class="col-12">
+                <div class="breadcumb--con">
+                    <h2 class="title">Gerenciar Conteúdo</h2>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item active" aria-current="page">Consórcio Processamento & Tecnologia</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <button class="btn btn-primary" data-toggle="modal" data-target="#adicionar">Adicionar Conteúdo</button>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Título</th>
+                <th scope="col">Introdução</th>
+                <th scope="col">Data</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Aviso</td>
+                <td>Novos Feriados</td>
+                <td>11/09/2019</td>
+                <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editar"><i class="fa fa-pencil-square-o"></i></button></td>
+                <td><a href="" class="btn btn-primary" data-toggle="modal" data-target="#excluir"><i class="fa fa-close"></i></a></td>
+            </tr>
+            <tr>
+                <td>Notícia</td>
+                <td>Fiscalização Detran DF</td>
+                <td>16/09/2019</td>
+                <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editar"><i class="fa fa-pencil-square-o"></i></button></td>
+                <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#excluir"><i class="fa fa-close"></i></button></td>
+            </tr>
+        </tbody>
+    </table>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-end">
+            <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Primeiro</a>
+            </li>
+            <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#">Próximo</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="#">Último</a>
+            </li>
+        </ul>
+    </nav>
+</div><br /><br />
+
